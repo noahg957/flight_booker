@@ -1,0 +1,7 @@
+<%= simple_form_for :search, url: flights_path, method: "GET" do |f|%>
+  <%= f.input :from_airport_id, label: 'From', collection: @airports %>
+  <%= f.input :to_airport_id, label: 'To', collection: @airports %>
+  <%= f.input :departure_time, collection: @dates %>
+  <%= f.input :number_of_tickets, collection: 1..4 %>
+  <%= f.button :submit %>
+<% end %>

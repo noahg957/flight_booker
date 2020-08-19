@@ -1,0 +1,5 @@
+<%= simple_form_for new_booking_path method: "GET" do |f|%>
+  <%= f.input :flight_id, as: :radio_buttons, collection: @available_flights %>
+  <%= f.button :submit %>
+<% end %>
+  
